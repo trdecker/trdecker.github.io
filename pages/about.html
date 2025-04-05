@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Header from components folder -->
+  <div id="header-container"></div>
+
+  <main style="margin: 40px 100px">
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <!-- <h1>Little by little, one travels far</h1>
+        <div style="width: 100%; max-width: 580px; text-align: right;">
+          <i>J.R.R. Tolkien</i>
+        </div> -->
+        <div style="text-align: left; max-width: 80%">
+            <p>I'm a web developer with a degree in computer science from Brigham Young University - Idaho and an amateur writer who smoetimes plays drums.</p>
+
+            <p>This blog is mostly a way to share whatever random things I like, as well showcase cool stuff I'm working on.</p>
+        </div>
+    </div>
+</p>
+
+  </main>
+
+  <script>
+    // Load the shared header
+    fetch('../components/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
