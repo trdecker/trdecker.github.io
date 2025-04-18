@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>000</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <style>
+    .post-container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    .post-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .post-meta {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .post-content p {
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-container"></div>
+
+  <div class="post-container">
+    <h2 class="post-title">Hello World!</h2>
+    <div class="post-meta">Published on April 18, 2025</div>
+
+    <div class="post-content">
+      <p>Hello world!<p>
+
+      <p>This is my first post in a blog that a hunch says will last a while.</p>
+
+      <p>
+        I'm writing this entirely in base html/CSS/javascript; so no funny business. 
+        In a day of frameworks and libraries galore, I wanted to challenge myself by making this site in this way. 
+        It also doubles as a creative outlet, where I can spew whatever random thoughts I have.
+      </p>
+    
+      <p>
+        But I'm not sure how scalable this blog will end up being. I may look back at my decision to NOT use a framework as a sore mistake-alas, it may be so.
+        But I didn't write this blog to have fancy features or login accounts or dynamic graphs or whatever else may be; I made it to be written in.
+      </p>
+
+      <p>
+        I have a strange itch for accuracy, which means making quick claims is something I'm not wont to do. I hate the idea of telling a lie, and worse,
+        I'd hate the feeling embarrasing of being wrong. That said, I have a quick thought on html.
+      </p>
+
+      <p>
+        But that will have to be next time. My break is over, and I have to return to work.
+      </p>
+
+      <p>Tad</p>
+    </div>
+
+    <a href="../posts.html" class="back-link">← Back to all posts</a>
+  </div>
+
+  <script>
+    fetch('../../components/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-container').innerHTML = data;
+    });
+  </script>
+
+</body>
+</html>
